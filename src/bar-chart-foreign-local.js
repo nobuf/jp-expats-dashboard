@@ -12,7 +12,8 @@ export function renderBarChartForeignAndLocal (containerForTotal, containerForCh
       foreignTotal: foreignTargetPrefecture.total,
       localTotal: localTargetPrefecture.total,
       foreignChange: foreignTargetPrefecture.change,
-      localChange: localTargetPrefecture.change
+      localChange: localTargetPrefecture.change,
+      ratio: foreignTargetPrefecture.total / (foreignTargetPrefecture.total + localTargetPrefecture.total) * 100
     }
   })
   const prefectureNames = prefectureIds.sort((a, b) => +a.id > +b.id ? -1 : 1).map((prefecture) => prefecture.name)

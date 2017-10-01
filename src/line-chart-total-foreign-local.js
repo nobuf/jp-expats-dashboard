@@ -21,9 +21,9 @@ export function renderTotalForeignAndLocalPopulationTransitions (containerForFor
   }
 
   const renderLineChart = (container, items) => {
-    const width = 400
-    const height = 200
-    const margin = {top: 20, right: 20, bottom: 20, left: 20}
+    const margin = {top: 20, right: 100, bottom: 40, left: 100}
+    const width = 600 - margin.left - margin.right
+    const height = 200 - margin.top - margin.bottom
     const svg = container.append('svg')
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
@@ -47,23 +47,27 @@ export function renderTotalForeignAndLocalPopulationTransitions (containerForFor
     svg.append('g')
       .attr('class', 'x axis')
       .attr('transform', 'translate(0,' + height + ')')
-      .call(d3.axisBottom(x).ticks(d3.timeYear.every(1)))
+      .call(d3.axisBottom(x).tickValues(x.domain()))
 
     const item = svg.selectAll('.item')
       .data([items])
       .enter().append('g')
       .attr('class', (d) => 'item item-' + d.id)
 
+    const format = d3.format(',')
+
     item.append('text')
-      .attr('x', d => x(d.values[d.values.length - 1].year) - 30)
+      .attr('x', d => x(d.values[d.values.length - 1].year))
       .attr('y', d => y(d.values[d.values.length - 1].total) - 10)
       .style('font-size', '9px')
-      .text(d => d3.format(',')(d.values[d.values.length - 1].total))
+      .style('text-anchor', 'middle')
+      .text(d => format(d.values[d.values.length - 1].total))
     item.append('text')
-      .attr('x', d => x(d.values[0].year) - 20)
+      .attr('x', d => x(d.values[0].year))
       .attr('y', d => y(d.values[0].total) - 10)
       .style('font-size', '9px')
-      .text(d => d3.format(',')(d.values[0].total))
+      .style('text-anchor', 'middle')
+      .text(d => format(d.values[0].total))
     item.append('path')
       .attr('class', 'line')
       .attr('d', (d) => line(d.values))

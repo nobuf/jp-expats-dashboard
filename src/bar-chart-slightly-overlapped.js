@@ -10,8 +10,8 @@ export function renderBarChartSlightlyOverlapped (container, data, threshold = 0
 
   const bandHeight = 20
 
-  const margin = {top: 20, right: 60, bottom: 20, left: 50, xAxis: 220}
-  const width = 800 - margin.left - margin.right - margin.xAxis
+  const margin = {top: 20, right: 70, bottom: 20, left: 50, xAxis: 220}
+  const width = 600 - margin.left - margin.right - margin.xAxis
   const height = bandHeight * sortedData.length - margin.top - margin.bottom
 
   const xScale = d3.scaleLinear().range([0, width])

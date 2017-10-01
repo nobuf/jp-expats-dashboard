@@ -59,6 +59,8 @@ d3.queue()
   .await((error, f2015, f2016) => {
     if (error) throw error
 
+    // The spreadsheet contains larger units like Asia, South America.
+    const regions = ['アジア', '南米', 'ヨーロッパ', '北米', 'アフリカ', 'オセアニア']
     // We might want to prepare the list of countries/areas
     const nationalities = Array.from(
       new Set(
@@ -66,7 +68,7 @@ d3.queue()
           .map(f => f.columns.slice(2)) // skip `都道府県` and `総数`
           .reduce((a, b) => a.concat(b), [])
       )
-    ).filter(d => !['アジア', '南米', 'ヨーロッパ', '北米', 'アフリカ', 'オセアニア'].includes(d))
+    ).filter(d => !regions.includes(d))
 
     const nationalityDataRaw = [
       {year: 2015, data: f2015[0]}, // [0] contains prefecture_id=null which is national total

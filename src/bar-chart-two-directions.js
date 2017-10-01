@@ -1,11 +1,11 @@
 import * as d3 from 'd3'
 
 export function renderBarChartTwoDirections (container, items, yDomains, keyForLeftSide, keyForRightSide) {
-  const containerWidth = 980
-  const margin = {top: 20, right: 20, bottom: 30, left: containerWidth / 2, focusText: 50}
+  const containerWidth = 600
   // Since there are two bar chars side by side, width in this case is
-  // about the half of the container's width.
-  const width = containerWidth - margin.left - margin.right - margin.focusText
+  // about the 2/3 of the container's width.
+  const margin = {top: 0, right: 20, bottom: 30, left: containerWidth / 3 * 2, focusText: 50}
+  const width = containerWidth - (containerWidth / 2.1) - margin.right - margin.focusText
   const height = 600 - margin.top - margin.bottom
 
   const xRightValue = (d) => d[keyForRightSide] > 0 ? d[keyForRightSide] : 0
@@ -49,10 +49,11 @@ export function renderBarChartTwoDirections (container, items, yDomains, keyForL
   focus.append('text')
     .attr('class', 'left')
     .style('font-size', '8px')
+    .style('text-anchor', 'end')
 
   svg.append('rect')
     .attr('class', 'overlay')
-    .attr('x', -containerWidth / 2)
+    .attr('x', -margin.left)
     .attr('width', containerWidth)
     .attr('height', height)
     .on('mouseover', () => focus.style('display', null))
@@ -70,8 +71,7 @@ export function renderBarChartTwoDirections (container, items, yDomains, keyForL
         left
           .attr('y', () => 8 + yMap(item))
           .text(d3.format(',')(item[keyForLeftSide]))
-        const textWidth = left.node().getComputedTextLength()
-        left.attr('x', () => -20 - yAxisWidth() - textWidth - xLeftMap(item))
+        left.attr('x', () => -20 - yAxisWidth() - xLeftMap(item))
       }
     })
 

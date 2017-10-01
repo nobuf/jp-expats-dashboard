@@ -1,11 +1,83 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed #CCC;
+  color: #009;
+}
+
+footer {
+  text-align: center;
+  margin: 8vh 0;
+  font-size: 70%;
 }
 
 .main {
-  width: 980px;
+  max-width: 980px;
   margin: auto;
+
+  h1 {
+    margin: 10vh 0 14vh 0;
+    text-align: center;
+    font-size: 110%;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 105%;
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+.section {
+  display: flex;
+  margin: 5vh 0 8vh 0;
+
+  .chart {
+    width: 600px;
+  }
+
+  .description {
+    background-color: #f6f6f6;
+    margin-left: 2vw;
+    padding: 1.5em 3em;
+    line-height: 1.5em;
+    font-size: 80%;
+
+    ul {
+      margin-bottom: 0.5em;
+      padding-left: 1.5em;
+    }
+  }
+}
+
+@media all and (min-width: 800px) {
+  .section {
+    flex-wrap: nowrap;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .main {
+    width: 600px;
+  }
+  .section {
+    flex-wrap: wrap;
+
+    .description-container {
+      width: 380px;
+      margin: auto;
+    }
+  }
+}
+
+.note {
+  font-size: 90%;
 }
 
 .axis.y {
