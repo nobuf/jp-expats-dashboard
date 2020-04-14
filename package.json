@@ -14,7 +14,7 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
-    "css-loader": "^0.28.4",
+    "css-loader": "^3.5.2",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
@@ -22,15 +22,15 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.9.1",
+    "webpack-dev-server": "^3.1.11",
     "webpack-sources": "^1.0.1"
   },
   "dependencies": {
-    "csv": "^1.1.1",
+    "csv": "^5.3.2",
     "d3": "^4.10.0"
   }
 }
