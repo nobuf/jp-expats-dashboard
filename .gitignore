@@ -4,3 +4,4 @@ node_modules
 **/*.csv
 !docs/assets/*.csv
 **/*.xls
+.DS_Store

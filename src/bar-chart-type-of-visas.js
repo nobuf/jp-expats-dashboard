@@ -26,7 +26,7 @@ export function renderBarChartTypeOfVisas (container, visaTypesRawData) {
     'Intra-company Transferee': ['企業内転勤'],
     'Entertainer': ['興行'],
     'Skilled Labor': ['技能'],
-    'Technical Intern Training': ['技能実習１号イ', '技能実習１号ロ', '技能実習２号イ', '技能実習２号ロ'],
+    'Technical Intern Training': ['特定技能１号', '特定技能２号', '技能実習１号イ', '技能実習１号ロ', '技能実習２号イ', '技能実習２号ロ', '技能実習３号イ', '技能実習３号ロ'],
     'Cultural Activities': ['文化活動'],
     'Student': ['留学'],
     'Trainee': ['研修'],

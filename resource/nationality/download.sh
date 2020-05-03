@@ -4,13 +4,17 @@
 # http://www.moj.go.jp/housei/toukei/toukei_ichiran_touroku.html
 #
 
-curl -o nationality-201612.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000031559330"
-curl -o nationality-201512.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000031399580"
-curl -o nationality-201412.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000029226529"
-curl -o nationality-201312.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000024395141"
-curl -o nationality-201212.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000021315232"
+curl -L -o nationality-201906.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031886385&fileKind=0"
+curl -L -o nationality-201806.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031770321&fileKind=0"
+curl -L -o nationality-201706.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031642055&fileKind=0"
+curl -L -o nationality-201606.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031474391&fileKind=0"
+curl -L -o nationality-201506.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031322015&fileKind=0"
+curl -L -o nationality-201406.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027237251&fileKind=0"
+curl -L -o nationality-201306.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000023609653&fileKind=0"

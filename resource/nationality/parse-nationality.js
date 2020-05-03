@@ -4,7 +4,7 @@ const d3 = require('d3')
 
 const prefectures = d3.csvParse(fs.readFileSync('../../docs/assets/prefectures.csv', 'utf8'))
 
-const transform = csv.transform((record) => {
+const transformer = csv.transform((record) => {
   // nationality-201212.xls has a blank row at the end of the file
   if (record.length < 2) {
     return null
@@ -18,8 +18,6 @@ const transform = csv.transform((record) => {
 
 process.stdin
   .pipe(csv.parse())
-  .pipe(transform)
-  .pipe(csv.stringify({
-    header: true
-  }))
+  .pipe(transformer)
+  .pipe(csv.stringify())
   .pipe(process.stdout)

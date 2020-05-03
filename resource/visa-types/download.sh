@@ -4,11 +4,19 @@
 # http://www.moj.go.jp/housei/toukei/toukei_ichiran_touroku.html
 #
 
-curl -o visa-201612.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000031559331"
-curl -o visa-201512.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000031399581"
-curl -o visa-201412.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000029226530"
-curl -o visa-201312.xls \
-	"http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000024395142"
+curl -L -o visa-201906.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031886386&fileKind=0"
+curl -L -o visa-201806.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031770322&fileKind=0"
+curl -L -o visa-201706.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031642056&fileKind=0"
+curl -L -o visa-201606.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031474410&fileKind=0"
+curl -L -o visa-201506.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031321809&fileKind=0"
+curl -L -o visa-201406.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000027237323&fileKind=0"
+
+# 2013 has a different format. Skip it for now.
+#curl -L -o visa-201306.xls \
+#	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000023609656&fileKind=0"

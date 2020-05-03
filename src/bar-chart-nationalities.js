@@ -29,7 +29,8 @@ const convertCountryNameJapaneseToEnglish = (d) => {
     'ロシア': 'Russia',
     'モンゴル': 'Mongolia',
     'ドイツ': 'Germany',
-    'ボリビア': 'Bolivia'
+    'ボリビア': 'Bolivia',
+    'トルコ': 'Turkey',
   }
 
   return convertTable[d] || d

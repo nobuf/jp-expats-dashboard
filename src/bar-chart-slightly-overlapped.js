@@ -25,7 +25,7 @@ export function renderBarChartSlightlyOverlapped (container, data, threshold = 0
   const yMap = (d) => yScale(d.id)
 
   // xScale.domain([0, d3.max(sortedData, xValueLatest)])
-  xScale.domain([0, 750000]) // TODO global max value
+  xScale.domain([0, 800000]) // TODO global max value
   yScale.domain(sortedData.map(d => d.id))
 
   const svg = container.append('svg')

@@ -17,7 +17,7 @@ footer {
 }
 
 .main {
-  max-width: 980px;
+  max-width: 600px;
   margin: auto;
 
   h1 {
@@ -27,15 +27,14 @@ footer {
   }
 
   h2 {
-    margin-top: 0;
+    margin: 3em 0 4em 0;
+    text-align: center;
     font-size: 105%;
     font-weight: normal;
-    font-style: italic;
   }
 }
 
 .section {
-  display: flex;
   margin: 5vh 0 8vh 0;
 
   .chart {
@@ -43,35 +42,15 @@ footer {
   }
 
   .description {
-    background-color: #f6f6f6;
     margin-left: 2vw;
     padding: 1.5em 3em;
     line-height: 1.5em;
     font-size: 80%;
+    color: #999;
 
     ul {
       margin-bottom: 0.5em;
       padding-left: 1.5em;
-    }
-  }
-}
-
-@media all and (min-width: 800px) {
-  .section {
-    flex-wrap: nowrap;
-  }
-}
-
-@media all and (max-width: 800px) {
-  .main {
-    width: 600px;
-  }
-  .section {
-    flex-wrap: wrap;
-
-    .description-container {
-      width: 380px;
-      margin: auto;
     }
   }
 }
