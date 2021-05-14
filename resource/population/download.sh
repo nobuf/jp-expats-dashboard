@@ -6,6 +6,10 @@
 # 【日本人住民】都道府県別人口、人口動態及び世帯数
 # 【外国人住民】都道府県別人口、人口動態及び世帯数
 
+curl -L -o population-foreign-2020.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031971234&fileKind=0"
+curl -L -o population-local-2020.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031971211&fileKind=0"
 
 curl -L -o population-foreign-2019.xls \
 	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031843914&fileKind=0"

@@ -4,6 +4,8 @@
 # http://www.moj.go.jp/housei/toukei/toukei_ichiran_touroku.html
 #
 
+curl -L -o nationality-202006.xls \
+	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000032030595&fileKind=0"
 curl -L -o nationality-201906.xls \
 	"https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031886385&fileKind=0"
 curl -L -o nationality-201806.xls \
