@@ -17,18 +17,17 @@ footer {
 }
 
 .main {
-  max-width: 600px;
-  margin: auto;
+  min-width: 600px;
+  margin: auto 2rem;
 
   h1 {
-    margin: 10vh 0 14vh 0;
-    text-align: center;
-    font-size: 110%;
+    margin: 3rem 0;
+    font-size: 140%;
   }
 
   h2 {
     margin: 3em 0 4em 0;
-    text-align: center;
+    padding-left: 10px;
     font-size: 105%;
     font-weight: normal;
   }
@@ -36,14 +35,10 @@ footer {
 
 .section {
   margin: 5vh 0 8vh 0;
-
-  .chart {
-    width: 600px;
-  }
+  border-left: 0.5px solid #eee;
 
   .description {
-    margin-left: 2vw;
-    padding: 1.5em 3em;
+    margin: 0 2vw;
     line-height: 1.5em;
     font-size: 80%;
     color: #999;
@@ -51,6 +46,33 @@ footer {
     ul {
       margin-bottom: 0.5em;
       padding-left: 1.5em;
+    }
+  }
+}
+
+@media screen
+  and (min-device-width: 1025px) {
+  .main {
+    max-width: 600px;
+    margin: auto;
+
+    h1 {
+      margin: 10vh 0 14vh 0;
+      text-align: center;
+    }
+    h2 {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .section {
+    .chart {
+      width: 600px;
+    }
+
+    .description {
+      padding: 1.5em 3em;
     }
   }
 }
